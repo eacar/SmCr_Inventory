@@ -46,6 +46,7 @@ namespace IntegrationTests.Api
             Assert.Equal(entity.Id, result.Id);
             Assert.Equal(entity.Name, result.Name);
             Assert.Equal(entity.WarehouseStatus, result.WarehouseStatus);
+            Assert.Null(entity.ModifiedOn);
 
             #endregion
         }
@@ -83,6 +84,8 @@ namespace IntegrationTests.Api
             Assert.NotNull(updated);
             Assert.Equal(postReq.Name, updated.Name);
             Assert.Equal(postReq.WarehouseStatus, updated.WarehouseStatus);
+            Assert.NotNull(updated.ModifiedOn);
+            Assert.True(updated.ModifiedOn > DateTime.UtcNow.AddSeconds(-1));
 
             #endregion
         }

@@ -16,6 +16,7 @@ namespace Inv.Infrastructure.Database.Configurations
             builder.Property(p => p.Email).HasColumnType("NVARCHAR(512)");
             builder.Property(p => p.PasswordHash).IsRequired().HasColumnType("NVARCHAR(512)");
             builder.Property(p => p.IsDeleted).IsRequired().HasDefaultValue(false);
+            builder.Property(p => p.CreatedOn).HasDefaultValueSql("GETUTCDATE()");
 
             #endregion
 

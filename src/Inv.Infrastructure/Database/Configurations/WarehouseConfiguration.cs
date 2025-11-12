@@ -13,6 +13,7 @@ namespace Inv.Infrastructure.Database.Configurations
             builder.Property(p => p.Id).HasDefaultValueSql("NEWID()");
             builder.Property(p => p.Name).IsRequired().HasColumnType("NVARCHAR(150)");
             builder.Property(p => p.IsDeleted).HasDefaultValue(false);
+            builder.Property(p => p.CreatedOn).HasDefaultValueSql("GETUTCDATE()");
         }
     }
 }

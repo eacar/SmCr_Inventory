@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+
+		<IsPackable>false</IsPackable>
+		<IsTestProject>true</IsTestProject>
+	</PropertyGroup>
+
+	<ItemGroup>
+    <PackageReference Include="Moq" Version="4.20.70" />		
+		<PackageReference Include="FluentValidation.Validators.UnitTestExtension" Version="1.11.0.2" />
+		<PackageReference Include="coverlet.collector" Version="6.0.0" />
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+		<PackageReference Include="xunit" Version="2.5.3" />
+		<PackageReference Include="xunit.runner.visualstudio" Version="2.5.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Using Include="Xunit" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\src\Inv.Api\Inv.Api.csproj" />
+	  <ProjectReference Include="..\..\src\Inv.Application\Inv.Application.csproj" />
+	  <ProjectReference Include="..\..\src\Inv.Domain\Inv.Domain.csproj" />
+	  <ProjectReference Include="..\..\src\Inv.Infrastructure\Inv.Infrastructure.csproj" />
+	</ItemGroup>
+
+</Project>

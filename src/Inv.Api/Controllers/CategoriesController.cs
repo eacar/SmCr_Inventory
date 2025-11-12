@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Inv.Api.Controllers
 {
-    internal class CategoriesController
-    {
-    }
+    //This is just a representation for other CRUD operations for this microservice part
+    //internal class CategoriesController
+    //{
+    //}
 }

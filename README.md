@@ -13,7 +13,7 @@ dotnet build
 
 # 2) Apply migrations (creates DB if missing)
 #    Ensure ConnectionStrings:Main points to a reachable MS‑SQL instance
-dotnet ef database update --project Infrastructure  --startup-project Api
+dotnet ef database update --project Inv.Infrastructure --startup-project Inv.Api
 
 # 3) Run the API
 dotnet run --project src/Inv.Api
